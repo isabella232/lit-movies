@@ -16,7 +16,7 @@ import api from "../../redux/api";
 //Custom-components
 import "./../components/my-loader";
 import "../components/dw-surface";
-import "../movies/list-item";
+import "../movies/movies-list-item";
 
 export class PersonView extends connect(store)(localize(i18next)(LitElement)) {
 
@@ -174,11 +174,11 @@ export class PersonView extends connect(store)(localize(i18next)(LitElement)) {
 
             return html`
             <div>
-              <list-item .id=${row.id} redirect="movies">
+              <movies-list-item .id=${row.id} redirect="movies">
                 <img slot="image" src=${mImageUrl}>
                 <h2 slot="title1">${row.title}</h2>
                 ${row.character !== null && row.character !== "" ? html`<h3 slot="title2">as ${row.character}</h3>` : html``}
-              </list-item>
+              </movies-list-item>
             </div>`
           })}
         </div>

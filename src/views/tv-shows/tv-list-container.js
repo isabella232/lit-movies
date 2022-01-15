@@ -92,10 +92,10 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
           }
           return html`
             <div>
-              <tv-list-item .id=${row.id} redirect="movies">
+              <tv-list-item .id=${row.id} redirect="shows">
 
                 <img slot="image" src=${imageUrl} />
-                <h2 slot="title1">${row.title}</h2>
+                <h2 slot="title1">${row.name}</h2>
                   
               </tv-list-item>
             </div>`

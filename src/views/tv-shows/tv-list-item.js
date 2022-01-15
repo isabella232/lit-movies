@@ -96,4 +96,4 @@ export class ListItem extends connect(store)(localize(i18next)(DwSurface)) {
   }
 }
 
-window.customElements.define("list-item", ListItem);
+window.customElements.define("tv-list-item", ListItem);

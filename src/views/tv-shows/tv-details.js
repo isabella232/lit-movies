@@ -16,11 +16,11 @@ import api from "../../redux/api";
 //Custom-components
 import "./../components/my-loader";
 import "../components/dw-surface";
-import "./list-item";
+import "./tv-list-item";
 
 import moment from "moment/src/moment";
 
-export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) {
+export class TVDetails extends connect(store)(localize(i18next)(LitElement)) {
 
   static styles = [
     css`
@@ -130,7 +130,7 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
       <div class="header" style="background: linear-gradient(to right, rgb(4, 28, 50, 0.8), rgb(4, 41, 58, 0.4)), url(${backgroundImageUrl}); background-size: cover;">
         <img src=${imageUrl}>
         <div class="detail">
-          <h2>${this._data.title} </h2>
+          <h2>${this._data.name} </h2>
 
           ${this._getGenresView()}
         
@@ -177,11 +177,11 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
             
             return html`
             <div>
-              <list-item .id=${row.id} redirect="person">
+              <tv-list-item .id=${row.id} redirect="person">
                 <img slot="image" src=${imageUrl} />
                 <h2 slot="title1">${row.name}</h2>
                 <h3 slot="title2">as ${row.character}</h3>
-              </list-item>
+              </tv-list-item>
             </div>`
           })}
         </div>
@@ -193,10 +193,10 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
 
   _getData() {
     if (this._id !== undefined) {
-      api("/movie/" + this._id, 1)
+      api("/tv/" + this._id, 1)
         .then(res => this._data = res)
 
-      api("/movie/" + this._id + "/credits", 1)
+      api("/tv/" + this._id + "/credits", 1)
         .then(res => this._credits = res)
     }
 
@@ -210,4 +210,4 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
   }
 }
 
-window.customElements.define("movie-details", MovieDetails);
+window.customElements.define("tv-details", TVDetails);
