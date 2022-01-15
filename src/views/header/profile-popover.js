@@ -54,6 +54,11 @@ class ProfilePopover extends connect(store)(localize(i18next)(DwCompositeDialog)
           cursor: pointer;
           object-fit: cover;
         } 
+
+        dw-list-item{
+          display: flex;
+          align-items: center;
+        }
       `
     ];
   }
