@@ -19,8 +19,8 @@ export class ListItem extends connect(store)(localize(i18next)(DwSurface)) {
     DwSurface.styles,
     css`
       :host{
-        width: min-content;
-        height: 100%;
+        width: 170.66px; /*min-content*/;
+        height: 328px; /*100%*/;
         overflow: hidden;
         cursor: pointer;
         transition: transform 0.5s ease-in-out;
