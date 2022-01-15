@@ -16,7 +16,7 @@ import { localize } from '@dw/pwa-helpers';
 import "../components/my-loader";
 import "@dreamworld/dw-button";
 import "@dreamworld/dw-input";
-import "../movies/list-item";
+import "../movies/movies-list-item";
 
 export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
 
@@ -109,10 +109,10 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
           }
           return html`
             <div>
-              <list-item .id=${row.id} redirect="person">
+              <movies-list-item .id=${row.id} redirect="person">
                 <img slot="image" src=${imageUrl} />
                 <h2 slot="title1">${row.name}</h2>
-              </list-item>
+              </movies-list-item>
             </div>
           `
         })}
