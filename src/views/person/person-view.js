@@ -132,8 +132,8 @@ export class PersonView extends connect(store)(localize(i18next)(LitElement)) {
           
         
           <div class="overview">
-            <h4>Overview</h4>
-            <p>${this._data.overview}</p>
+            <!--<h4>Overview</h4>-->
+            <!--<p>${this._data.overview}</p>-->
           </div>
         </div>
       </div>

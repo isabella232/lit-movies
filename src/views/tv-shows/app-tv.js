@@ -40,14 +40,15 @@ export class AppTV extends connect(store)(localize(i18next)(LitElement)) {
 
       .filter{
         display: flex;
-        flex: 1;
-        justify-content: space-between;
+        flex: 1 1 0%;
+        justify-content: flex-end;
         align-items: center;
+        margin-right: 16px;
       }
 
       #nextBtn {
         float: right;
-        margin-right: 80px;
+        margin-right: 16px;
       }
     `
   ]

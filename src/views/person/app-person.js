@@ -39,9 +39,10 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
 
       .filter{
         display: flex;
-        flex: 1;
-        justify-content: space-between;
+        flex: 1 1 0%;
+        justify-content: flex-end;
         align-items: center;
+        margin-right: 16px;
       }
 
       .body{
@@ -56,6 +57,10 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
         margin-bottom: 8px;
       }
 
+      #nextBtn {
+        float: right;
+        margin-right: 16px;
+      }
     `
   ];
 
@@ -90,10 +95,10 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
         <div class="main">
           <div class="filter">
             <dw-input @keyup=${this._onSearch} value=${this.queryString} placeholder="Search"></dw-input>
-            <dw-button @click=${this._onNextClick} icon="navigate_next" trailingIcon raised>Next</dw-button>
           </div>
           <h2>Popular Persons</h2>
           ${this._getPersonsView()}
+          <dw-button id="nextBtn" @click=${this._onNextClick} icon="navigate_next" trailingIcon raised>Next</dw-button>
         </div>
       `;
     }
