@@ -18,7 +18,7 @@ import "./../components/my-loader";
 import "../components/dw-surface";
 import "./movies-list-item";
 
-import moment from "moment/src/moment";
+// import moment from "moment/src/moment";
 
 export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) {
 
@@ -145,10 +145,10 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
 
   _getGenresView(){
 
-    let date = moment(this._data.release_date).format("Do MMM, YYYY");
+    // let date = moment(this._data.release_date).format("Do MMM, YYYY");
     let genresString = this._data.genres.map( (e) => e.name);
     return html`<small>
-      ${date} - 
+      ${this._data.release_date} - 
       ${genresString.join(", ")} - 
       </small>
     `;
