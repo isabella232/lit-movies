@@ -26,6 +26,7 @@ export class AppTV extends connect(store)(localize(i18next)(LitElement)) {
         display: flex;
         flex: 1;
         margin-top: 28px;
+        margin-left: 16px;
       }
 
       h2{
@@ -42,6 +43,11 @@ export class AppTV extends connect(store)(localize(i18next)(LitElement)) {
         flex: 1;
         justify-content: space-between;
         align-items: center;
+      }
+
+      #nextBtn {
+        float: right;
+        margin-right: 80px;
       }
     `
   ]
@@ -76,10 +82,10 @@ export class AppTV extends connect(store)(localize(i18next)(LitElement)) {
         <div class="main">
           <div class="filter">
             <dw-input @keyup=${this._onSearch} value=${this.queryString} placeholder="Search"></dw-input>
-            <dw-button @click=${this._onNextClick} icon="navigate_next" trailingIcon raised>Next</dw-button>
           </div>
           <h2>Popular TV Shows</h2>
           <tv-list-container .dataSet=${this.data.results}></tv-list-container>
+          <dw-button id="nextBtn" @click=${this._onNextClick} icon="navigate_next" trailingIcon raised>Next</dw-button>
         </div>
       `
     }

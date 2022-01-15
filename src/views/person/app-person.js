@@ -25,6 +25,7 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
       :host{
         display: flex;
         flex: 1;
+        margin-left: 16px;
       }
 
       h2{
