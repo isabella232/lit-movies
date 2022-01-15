@@ -128,7 +128,7 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
 
     return html`
       <div class="header" style="background: linear-gradient(to right, rgb(4, 28, 50, 0.8), rgb(4, 41, 58, 0.4)), url(${backgroundImageUrl}); background-size: cover;">
-        <img src=${imageUrl}>
+        <img src=${imageUrl} alt="${this._data.overview}">
         <div class="detail">
           <h2>${this._data.title} </h2>
 
@@ -178,7 +178,7 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
             return html`
             <div>
               <movies-list-item .id=${row.id} redirect="person">
-                <img slot="image" src=${imageUrl} />
+                <img slot="image" src=${imageUrl} alt="${this._data.overview}"/>
                 <h2 slot="title1">${row.name}</h2>
                 <h3 slot="title2">as ${row.character}</h3>
               </movies-list-item>
