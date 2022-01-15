@@ -14,7 +14,7 @@ import { localize } from '@dw/pwa-helpers';
 
 //custom element
 import "../components/my-loader";
-import "./list-container";
+import "./movies-list-container";
 import "@dreamworld/dw-button";
 import "@dreamworld/dw-input";
 
@@ -79,7 +79,7 @@ export class AppMovies extends connect(store)(localize(i18next)(LitElement)) {
             <dw-button @click=${this._onNextClick} icon="navigate_next" trailingIcon raised>Next</dw-button>
           </div>
           <h2>Popular Movies</h2>
-          <list-container .dataSet=${this.data.results}></list-container>
+          <movies-list-container .dataSet=${this.data.results}></movies-list-container>
         </div>
       `
     }

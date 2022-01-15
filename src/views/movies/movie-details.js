@@ -16,7 +16,7 @@ import api from "../../redux/api";
 //Custom-components
 import "./../components/my-loader";
 import "../components/dw-surface";
-import "./list-item";
+import "./movies-list-item";
 
 import moment from "moment/src/moment";
 
@@ -177,11 +177,11 @@ export class MovieDetails extends connect(store)(localize(i18next)(LitElement)) 
             
             return html`
             <div>
-              <list-item .id=${row.id} redirect="person">
+              <movies-list-item .id=${row.id} redirect="person">
                 <img slot="image" src=${imageUrl} />
                 <h2 slot="title1">${row.name}</h2>
                 <h3 slot="title2">as ${row.character}</h3>
-              </list-item>
+              </movies-list-item>
             </div>`
           })}
         </div>

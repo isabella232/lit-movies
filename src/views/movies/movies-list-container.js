@@ -9,7 +9,7 @@ import i18next from '@dw/i18next-esm';
 import { localize } from '@dw/pwa-helpers';
 
 //custom-components
-import "./list-item";
+import "./movies-list-item";
 
 //selectors
 import * as app from "../../redux/app";
@@ -92,12 +92,12 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
           }
           return html`
             <div>
-              <list-item .id=${row.id} redirect="movies">
+              <movies-list-item .id=${row.id} redirect="movies">
 
                 <img slot="image" src=${imageUrl} />
                 <h2 slot="title1">${row.title}</h2>
                   
-              </list-item>
+              </movies-list-item>
             </div>`
         } )}
       </div>
@@ -111,4 +111,4 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
   }
 }
 
-window.customElements.define("list-container", ListContainer);
+window.customElements.define("movies-list-container", ListContainer);
