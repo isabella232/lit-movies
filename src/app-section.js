@@ -108,9 +108,14 @@ export class AppSection extends connect(store)(LitElement) {
       return html`<app-movies></app-movies>`;
     }
 
-    if (this._page === "shows") {
-      import('./views/tv-shows/app-tv.js');
+    if (this._page === "shows" && this._id === undefined) {
+      import('./views/tv-shows/app-tv');
       return html`<app-tv></app-tv>`;
+    }
+
+    if (this._page === "shows" && this._id !== undefined) {
+      import('./views/tv-shows/tv-details');
+      return html`<tv-details></tv-details>`;
     }
 
     if (this._page === "movies" && this._id === undefined) {
