@@ -94,7 +94,7 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
             <div>
               <tv-list-item .id=${row.id} redirect="shows">
 
-                <img slot="image" src=${imageUrl} />
+                <img slot="image" src=${imageUrl} width="171" height="256"/>
                 <h2 slot="title1">${row.name}</h2>
                   
               </tv-list-item>
