@@ -1,5 +1,5 @@
-# TMDB
-Connecting biggest movie and TV shows database to web application using Polymer.js
+# Lit Movies
+A TMDB Movies application built using [Lit Element](https://lit.dev)
 
 # Install
 ```yarn install```

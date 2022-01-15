@@ -61,6 +61,11 @@ export class AppDrawer extends connect(store)(localize(i18next)(DwSurface)) {
         width: max-content;
         height: max-content;
       }
+
+      dw-list-item{
+        display: flex;
+        align-items: center;
+      }
     `
   ]
 
