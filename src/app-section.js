@@ -104,13 +104,13 @@ export class AppSection extends connect(store)(LitElement) {
   _getPageView() {
 
     if (this._page === "root" || this._page === "home") {
-      import('./views//home/app-home');
-      return html`<app-home></app-home>`
+      import('./views/movies/app-movies');
+      return html`<app-movies></app-movies>`;
     }
 
     if (this._page === "shows") {
-      import('./views/tv-shows/tv-shows.js');
-      return html`<tv-shows></tv-shows>`;
+      import('./views/tv-shows/app-tv.js');
+      return html`<app-tv></app-tv>`;
     }
 
     if (this._page === "movies" && this._id === undefined) {
@@ -131,11 +131,6 @@ export class AppSection extends connect(store)(LitElement) {
     if (this._page === "person" && this._id !== undefined) {
       import('./views/person/person-view');
       return html`<person-view></person-view>`;
-    }
-
-    if (this._page === "test") {
-      import('./views/test/test-page');
-      return html`<test-page></test-page>`;
     }
 
     if (this._page === "not-found") {
