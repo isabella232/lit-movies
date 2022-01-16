@@ -14,7 +14,7 @@ import "./movies-list-item";
 //selectors
 import * as app from "../../redux/app";
 
-import "@lit-labs/virtualizer";
+// import "@lit-labs/virtualizer";
 
 export class ListContainer extends connect(store)(localize(i18next)(LitElement)) {
   static styles = [
@@ -85,7 +85,9 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
           }}>
 
         </lit-virtualizer> -->
-        ${this.dataSet.map(row => {
+        
+        ${this.dataSet.map((row, index) => {
+          const imagesToEagerLoad = 4;
           let imageUrl = "src/img/not-found/not-available.png";
           if(row.poster_path !== null){
             imageUrl = "".concat(this.imageUrl, "/w300", row.poster_path);
@@ -94,7 +96,7 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
             <div>
               <movies-list-item .id=${row.id} redirect="movies">
 
-                <img slot="image" src=${imageUrl} width="171" height="256" alt="${row.overview}"/>
+                <img slot="image" src=${imageUrl} width="171" height="256" alt="${row.overview}" loading="${ index <= imagesToEagerLoad ? 'eager': 'lazy'}"/>
                 <h2 slot="title1">${row.title}</h2>
                   
               </movies-list-item>
