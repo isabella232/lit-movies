@@ -27,7 +27,12 @@ class LanguageComposite extends connect(store)(DwPopoverDialog) {
     return [
       super.styles,
       css`
-
+        dw-list-item{
+          display: flex;
+          justify-items: center;
+          align-content: center;
+          align-items: center;
+        }
       `
     ];
   }

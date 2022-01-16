@@ -28,17 +28,21 @@ class ThemeComposite extends connect(store)(DwPopoverDialog) {
     return [
       super.styles,
       css`
-
+        dw-list-item{
+          display: flex;
+          justify-items: center;
+          align-content: center;
+          align-items: center;
+        }
       `
     ];
   }
 
   get _contentTemplate() {
     return html`
-      <dw-list-item @click=${this._onThemeChange} title1="Light" leadingIcon="light_mode"
-        ?selected=${this._isSelected('light')} hasTrailingIcon trailingIcon=${this._isSelected('light') ? 'done' : '' }>
+      <dw-list-item @click=${this._onThemeChange} title1="Light" ?selected=${this._isSelected('light')} hasTrailingIcon trailingIcon=${this._isSelected('light') ? 'done' : '' }>
       </dw-list-item>
-      <dw-list-item @click=${this._onThemeChange} title1="Dark" leadingIcon="nightlight" ?selected=${this._isSelected('dark')}
+      <dw-list-item @click=${this._onThemeChange} title1="Dark" ?selected=${this._isSelected('dark')}
         hasTrailingIcon trailingIcon=${this._isSelected('dark') ? 'done' : '' }>
       </dw-list-item>
     `;
