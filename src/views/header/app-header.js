@@ -106,10 +106,10 @@ export class AppHeader extends connect(store)(localize(i18next)(DwSurface)){
 
   _getProfileView(){
     // return this.layout !== 'desktop' 
-    //   ? html`<img @click="${this._onProfileClick}" src="src/img/page-not-found.png">` 
+    //   ? html`<img @click="${this._onProfileClick}" src="src/img/page-not-found.jpeg">` 
     //   : html``;
 
-    return html`<img @click="${this._onProfileClick}" src="src/img/not-found/page-not-found.png">`;
+    return html`<img @click="${this._onProfileClick}" src="src/img/not-found/page-not-found.jpeg">`;
   }
 
   _getPageName(){

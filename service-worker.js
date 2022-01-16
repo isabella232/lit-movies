@@ -5,7 +5,7 @@ const assets = [
   '/movies',
   '/shows',
   '/not-found',
-  '/src/img/not-found/page-not-found.png',
+  '/src/img/not-found/page-not-found.jpeg',
   'https://fonts.googleapis.com/css?family=Material+Icons&display=block',
   'https://fonts.googleapis.com/css?family=Material+Icons+Outlined&display=block',
   '/src/img/favicon'
