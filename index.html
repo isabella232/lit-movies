@@ -6,10 +6,15 @@
   
 	<title>TMDB</title>
 
-  <link rel="shortcut icon" href="src/img/favicon/favicon.ico" type="image/x-icon" />
+  <!-- Preload initial API data -->
+  <link rel="preload" as="fetch" href="https://api.themoviedb.org/3/movie/popular?api_key=6b773e1f59009e9d5efc06c47c2ccd9c&page=undefined&language=en-US" crossorigin="anonymous">
   
+  <!-- Preload scripts -->
+  <link rel="modulepreload" src="./src/tmdb-app.js">
+
   <script type="module" src="./src/tmdb-app.js"></script>
   <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" href="src/img/favicon/favicon.ico" type="image/x-icon" />
 
   <style>
     :root{
