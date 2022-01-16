@@ -1,10 +1,10 @@
 {
   "name": "TMDB",
-  "home": "Home",
-  "movies": "Movies",
-  "shows": "Shows",
+  "home": "🏠 Home",
+  "movies": "🎥 Movies",
+  "shows": "📺 Shows",
   "notfound": "Not Found",
-  "theme": "Theme",
-  "language": "Language",
-  "person": "People"
+  "theme": "🌗 Theme",
+  "language": "🌎 Language",
+  "person": "🙋‍♀️ People"
 }

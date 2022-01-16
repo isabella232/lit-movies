@@ -97,10 +97,10 @@ export class AppDrawer extends connect(store)(localize(i18next)(DwSurface)) {
   get _getContentTemplate() {
     return html`
       <div class="body">
-        <dw-list-item lable="home" leadingIcon="home" title1='${i18next.t("home")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Home')}></dw-list-item>
-        <dw-list-item lable="movies" leadingIcon="movie" title1='${i18next.t("movies")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Movies')}></dw-list-item>
-        <dw-list-item lable="shows" leadingIcon="live_tv" title1='${i18next.t("shows")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Shows')}></dw-list-item>
-        <dw-list-item lable="person" leadingIcon="person" title1='${i18next.t("person")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Person')}></dw-list-item>
+        <dw-list-item lable="home" title1='${i18next.t("home")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Home')}></dw-list-item>
+        <dw-list-item lable="movies" title1='${i18next.t("movies")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Movies')}></dw-list-item>
+        <dw-list-item lable="shows" title1='${i18next.t("shows")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Shows')}></dw-list-item>
+        <dw-list-item lable="person" title1='${i18next.t("person")}' @click="${this._onPageChange}" ?selected=${this._isSelected('Person')}></dw-list-item>
       </div>
       
     `;
