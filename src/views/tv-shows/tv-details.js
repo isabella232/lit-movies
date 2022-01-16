@@ -171,7 +171,7 @@ export class TVDetails extends connect(store)(localize(i18next)(LitElement)) {
           ${this._credits.cast.slice(0, 20).map(row => {
             let imageUrl = "src/img/not-found/not-available.png";
             if(row.profile_path !== null){
-              imageUrl = "".concat(this.imageUrl, "/w500", row.profile_path);
+              imageUrl = "".concat(this.imageUrl, "/w300", row.profile_path);
             }
             let releaseDate
             

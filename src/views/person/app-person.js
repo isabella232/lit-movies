@@ -111,7 +111,7 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
         ${this._data.map( row => {
           let imageUrl = "src/img/not-found/not-available.png";
           if(row.profile_path !== null){
-            imageUrl = "".concat(this.imageUrl, "/w500", row.profile_path);
+            imageUrl = "".concat(this.imageUrl, "/w300", row.profile_path);
           }
           return html`
             <div>

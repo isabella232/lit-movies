@@ -169,7 +169,7 @@ export class PersonView extends connect(store)(localize(i18next)(LitElement)) {
             
             let mImageUrl = "src/img/not-found/not-available.png";
             if(row.poster_path !== null){
-              mImageUrl = "".concat(this.imageUrl, "/w500", row.poster_path);
+              mImageUrl = "".concat(this.imageUrl, "/w300", row.poster_path);
             }            
 
             return html`

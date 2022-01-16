@@ -76,7 +76,7 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
           .renderItem=${(row) => {
             let imageUrl = "src/img/not-found/not-available.png";
             if(row.poster_path !== null){
-              imageUrl = "".concat(this.imageUrl, "/w500", row.poster_path);
+              imageUrl = "".concat(this.imageUrl, "/w300", row.poster_path);
             }
             return html`
               <div>
@@ -88,7 +88,7 @@ export class ListContainer extends connect(store)(localize(i18next)(LitElement))
         ${this.dataSet.map(row => {
           let imageUrl = "src/img/not-found/not-available.png";
           if(row.poster_path !== null){
-            imageUrl = "".concat(this.imageUrl, "/w500", row.poster_path);
+            imageUrl = "".concat(this.imageUrl, "/w300", row.poster_path);
           }
           return html`
             <div>
