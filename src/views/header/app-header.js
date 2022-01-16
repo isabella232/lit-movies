@@ -54,6 +54,10 @@ export class AppHeader extends connect(store)(localize(i18next)(DwSurface)){
         height: max-content;
       }
 
+      button{
+        
+      }
+
       .title{
         flex: 1;
       }
@@ -87,7 +91,10 @@ export class AppHeader extends connect(store)(localize(i18next)(DwSurface)){
     return html`
       <div class="header">
         <div class="title">
-          <dw-icon-button id="btn-menu" @click="${this._onDrawerToggel}" icon="menu"></dw-icon-button>
+          <button id="btn-menu" @click="${this._onDrawerToggel}" name="menu">
+          <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+          </button>
           <h4>${this._getPageName()}</h4>
         </div>
         ${this._getProfileView()}
@@ -129,5 +136,7 @@ export class AppHeader extends connect(store)(localize(i18next)(DwSurface)){
     i18next.changeLanguage(app.selectors.getLanguage(state));
   }
 }
+
+
 
 window.customElements.define("app-header", AppHeader);
