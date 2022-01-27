@@ -16,7 +16,7 @@ import { localize } from '@dw/pwa-helpers';
 import "../components/my-loader";
 import "./tv-list-container";
 import "@dreamworld/dw-button";
-import "@dreamworld/dw-input";
+//import "@dreamworld/dw-input";
 
 export class AppTV extends connect(store)(localize(i18next)(LitElement)) {
 
@@ -50,6 +50,26 @@ export class AppTV extends connect(store)(localize(i18next)(LitElement)) {
         float: right;
         margin-right: 16px;
       }
+
+      .mdc-text-field__input {
+        font-family: Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+        letter-spacing: 0.009375em;
+        text-decoration: inherit;
+        text-transform: inherit;
+        align-self: flex-end;
+        box-sizing: border-box;
+        padding: 10px 16px 6px;
+        transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        border: 1px solid;
+        border-radius: 1px;
+        background: 0px 0px;
+        appearance: none;
+        caret-color: #6200ee;
+    }
     `
   ]
 
@@ -82,7 +102,7 @@ export class AppTV extends connect(store)(localize(i18next)(LitElement)) {
       return html`
         <div class="main">
           <div class="filter">
-            <dw-input @keyup=${this._onSearch} value=${this.queryString} placeholder="Search"></dw-input>
+            <input class="mdc-text-field__input" @keyup=${this._onSearch} value=${this.queryString} placeholder="Search"></input>
           </div>
           <h2>Popular TV Shows</h2>
           <tv-list-container .dataSet=${this.data.results}></tv-list-container>

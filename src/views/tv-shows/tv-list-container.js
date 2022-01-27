@@ -14,7 +14,7 @@ import "./tv-list-item";
 //selectors
 import * as app from "../../redux/app";
 
-import "@lit-labs/virtualizer";
+// import "@lit-labs/virtualizer";
 
 export class ListContainer extends connect(store)(localize(i18next)(LitElement)) {
   static styles = [
