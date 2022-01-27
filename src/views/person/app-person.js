@@ -14,7 +14,7 @@ import { localize } from '@dw/pwa-helpers';
 
 //components
 import "../components/my-loader";
-import "@dreamworld/dw-button";
+// import "@dreamworld/dw-button";
 //import "@dreamworld/dw-input";
 import "../movies/movies-list-item";
 
@@ -81,6 +81,39 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
         appearance: none;
         caret-color: #6200ee;
     }
+
+    .mdc-button {
+        -webkit-font-smoothing: antialiased;
+        font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+        font-size:0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.0892857em;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0px 16px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-width: 64px;
+        border: none;
+        outline: none;
+        line-height: inherit;
+        user-select: none;
+        appearance: none;
+        overflow: visible;
+        vertical-align: middle;
+        border-radius: 4px;
+        height: 36px;
+        background: #6200ee;
+        color: white;
+    }
+
+    .mdc-button:hover,  .mdc-button:focus-visible,  .mdc-button:focus {
+        box-shadow: var(--mdc-button-raised-box-shadow-hover,0 2px 4px -1px rgba(0,0,0,0.2),0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12));
+        background: #7754a9;
+    }
     `
   ];
 
@@ -118,7 +151,7 @@ export class AppPerson extends connect(store)(localize(i18next)(LitElement)){
           </div>
           <h2>Popular Persons</h2>
           ${this._getPersonsView()}
-          <dw-button id="nextBtn" @click=${this._onNextClick} icon="navigate_next" trailingIcon raised>Next</dw-button>
+          <button class="mdc-button" id="nextBtn" @click=${this._onNextClick} icon="navigate_next" trailingIcon raised>Next</button>
         </div>
       `;
     }
