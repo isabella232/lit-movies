@@ -15,8 +15,6 @@ import { localize } from '@dw/pwa-helpers';
 //custom element
 import "../components/my-loader";
 import "./movies-list-container";
-// import "@dreamworld/dw-button";
-//import "@dreamworld/dw-input";
 
 export class AppMovies extends connect(store)(localize(i18next)(LitElement)) {
 
